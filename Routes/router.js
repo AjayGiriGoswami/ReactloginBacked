@@ -144,9 +144,8 @@ const Verifyuser = async (req, res, next) => {
 };
 
 // Verfited
-router.get("/verify", Verifyuser, (req, res) => {
-  // authoroized
-  res.status(201).json({ Status: 201 });
+router.get("/verify", Verifyuser, async (req, res) => {
+  res.status(201).json({ status: 201 });
 });
 
 // logout
